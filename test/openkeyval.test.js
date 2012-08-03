@@ -6,23 +6,41 @@ module.exports = {
         var okv = new OpenKeyVal(false);
         okv.get('diogopms', function(err, res){
             test.ifError(err);
-            test.ok(!res.error);
+            test.deepEqual(res, 'justtestingthisthing');
             test.done();
         });
     },
 
     testGetKeyWithSSL: function(test){
-        // TODO
-    },
-
-    testSetKeyWithoutSSL: function(test){
         var okv = new OpenKeyVal(false);
-        okv.set('rpvl_test', function(err, res){
+        okv.get('diogopms', function(err, res){
             test.ifError(err);
-            test.ok(res);
+            test.deepEqual(res, 'justtestingthisthing');
             test.done();
         });
     },
 
-    testSetKeyWithSSL: function(test){}
+    testSetKeyWithoutSSL: function(test){
+        var okv = new OpenKeyVal(false);
+        okv.set('rpvl_test', 'testing...', function(err, res){
+            test.ifError(err);
+            test.ok(res);
+            okv.get('rpvl_test', function(err, res){
+                test.deepEqual(res, 'testing...');
+                test.done();
+            });
+        });
+    },
+
+    testSetKeyWithSSL: function(test){
+        var okv = new OpenKeyVal(true);
+        okv.set('rpvl_test', 'testing...', function(err, res){
+            test.ifError(err);
+            test.ok(res);
+            okv.get('rpvl_test', function(err, res){
+                test.deepEqual(res, 'testing...');
+                test.done();
+            });
+        });
+    }
 };
