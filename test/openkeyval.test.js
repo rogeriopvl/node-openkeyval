@@ -69,5 +69,44 @@ module.exports = {
                 test.done();
             });
         });
+    },
+
+    testMultiSetWithoutSSL: function(test){
+        var okv = new OpenKeyVal(false);
+        var multData = {
+            'rpvl_test_1': 'testing1',
+            'rpvl_test_2': 'testing2'
+        };
+        okv.multiSet(multData, function(err, res){
+            test.ifError(err);
+            test.ok(res);
+            okv.get('rpvl_test_1', function(err, res){
+                test.deepEqual(res, 'testing1');
+            });
+            okv.get('rpvl_test_2', function(err, res){
+                test.deepEqual(res, 'testing2');
+                test.done();
+            });
+        });
+    
+    },
+
+    testMultiSetWithSSL: function(test){
+        var okv = new OpenKeyVal(true);
+        var multData = {
+            'rpvl_test_1_ssl': 'testing1',
+            'rpvl_test_2_ssl': 'testing2'
+        };
+        okv.multiSet(multData, function(err, res){
+            test.ifError(err);
+            test.ok(res);
+            okv.get('rpvl_test_1_ssl', function(err, res){
+                test.deepEqual(res, 'testing1');
+            });
+            okv.get('rpvl_test_2_ssl', function(err, res){
+                test.deepEqual(res, 'testing2');
+                test.done();
+            });
+        });
     }
 };
