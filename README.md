@@ -43,7 +43,7 @@ This is a [openkeyval.org][0] api wrapper written in Node and available through 
 
     {
         status: 'set',
-        key: 'rpvl_test',
+        key: 'rogeriopvl',
         read_only_key: 'rok-e95ae5429a75d8c00f42e551019647b3a2436fd5',
         documentation_url: 'http://openkeyval.org/'
     }
@@ -71,8 +71,8 @@ This is a [openkeyval.org][0] api wrapper written in Node and available through 
     {
         status: 'multiset',
         keys: {
-            rpvl_test_1: 'rok-0ab0123498ed53016d0c1ae547aa052a5cc72c21',
-            rpvl_test_2: 'rok-8618d8060354024fbf8dea07523980740b95e64b'
+            rogeriopvl: 'rok-0ab0123498ed53016d0c1ae547aa052a5cc72c21',
+            rpvl: 'rok-8618d8060354024fbf8dea07523980740b95e64b'
         },
         documentation_url: 'http://openkeyval.org/'
     }
