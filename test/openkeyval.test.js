@@ -88,7 +88,7 @@ module.exports = {
                 test.done();
             });
         });
-    
+
     },
 
     testMultiSetWithSSL: function(test){
