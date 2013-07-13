@@ -25,6 +25,9 @@
     "directories": {
         "lib": "./lib"
     },
+    "scripts": {
+        "test": "grunt test"
+    },
     "licenses": [
         {
             "type": "MIT",
