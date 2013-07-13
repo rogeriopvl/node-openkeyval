@@ -1,4 +1,4 @@
-# node-openkeyval
+# node-openkeyval [![Build Status](https://travis-ci.org/rogeriopvl/node-openkeyval.png)](https://travis-ci.org/rogeriopvl/node-openkeyval)
 
 ## About
 
@@ -23,7 +23,7 @@ This is a [openkeyval.org][0] api wrapper written in Node and available through 
     });
 
 #### Output
-    
+
     rogeriopvl.com
 
 ### Set value
