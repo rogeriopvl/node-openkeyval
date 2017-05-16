@@ -1,5 +1,7 @@
 # node-openkeyval [![Build Status](https://travis-ci.org/rogeriopvl/node-openkeyval.png)](https://travis-ci.org/rogeriopvl/node-openkeyval)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rogeriopvl/node-openkeyval.svg)](https://greenkeeper.io/)
+
 ## About
 
 This is a [openkeyval.org][0] api wrapper written in Node and available through an NPM package.
